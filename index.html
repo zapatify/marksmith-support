@@ -11,34 +11,104 @@
   h1 { font-size: 36px; font-weight: 700; margin-bottom: 8px; }
   .subtitle { font-size: 18px; color: #6e6e73; margin-bottom: 48px; }
   h2 { font-size: 22px; font-weight: 600; margin-top: 40px; margin-bottom: 12px; }
+  h3 { font-size: 16px; font-weight: 600; margin-top: 24px; margin-bottom: 8px; color: #1d1d1f; }
   p { margin-bottom: 16px; color: #1d1d1f; }
   a { color: #0066cc; text-decoration: none; }
   a:hover { text-decoration: underline; }
+  .version-pill { display: inline-block; background: #e8e8ed; color: #1d1d1f; padding: 2px 8px; border-radius: 4px; font-size: 13px; font-weight: 500; margin-left: 8px; vertical-align: middle; }
+  .new-tag { display: inline-block; background: #34c759; color: white; padding: 1px 6px; border-radius: 3px; font-size: 11px; font-weight: 600; margin-left: 6px; vertical-align: middle; text-transform: uppercase; letter-spacing: 0.03em; }
+  ul { margin-bottom: 16px; padding-left: 24px; }
+  li { color: #1d1d1f; margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #e8e8ed; }
+  th { color: #6e6e73; font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  kbd { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; background: #f5f5f7; border: 1px solid #d2d2d7; border-bottom-width: 2px; border-radius: 4px; padding: 2px 6px; font-size: 12px; color: #1d1d1f; }
   .footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid #d2d2d7; font-size: 14px; color: #6e6e73; }
+  .footer a { color: #6e6e73; text-decoration: underline; }
 </style>
 </head>
 <body>
 <div class="container">
-  <h1>Marksmith</h1>
+  <h1>Marksmith <span class="version-pill">v1.2</span></h1>
   <p class="subtitle">A simple, fast, native markdown editor for macOS.</p>
 
   <h2>Support</h2>
-  <p>Having an issue or have a question? Send us an email at <a href="mailto:support@coredatallc.com">support@coredatallc.com</a> and we'll get back to you.</p>
+  <p>Having an issue, found a bug, or want to request a feature? Send us an email at <a href="mailto:support@coredatallc.com">support@coredatallc.com</a> and we'll get back to you.</p>
 
   <h2>What is Marksmith?</h2>
   <p>Marksmith is a native macOS markdown editor. Open a file and edit it. Open a folder and see your markdown files in a clean tree view. Toggle between Edit and Preview with a single click. That's it.</p>
   <p>No vaults. No subscriptions. No proprietary formats. Your files stay exactly where they are. Marksmith just helps you edit them.</p>
 
+  <h2>What's new in 1.2 <span class="new-tag">New</span></h2>
+  <ul>
+    <li><strong>Formatting toolbar.</strong> 15 buttons in the editor's title bar for bold, italic, strikethrough, inline code, headings (H1–H3), bullet / numbered / task lists, links, images, tables, horizontal rules, and block quotes. Click a button or use the matching keyboard shortcut.</li>
+    <li><strong>Toggle behavior.</strong> Click a formatting button on already-formatted text and the markers come off. Heading levels swap cleanly (H1 → H2 → H3) without stacking.</li>
+    <li><strong>Auto-numbering.</strong> Apply the numbered-list button across multiple lines and they auto-number 1, 2, 3, …</li>
+    <li><strong>Preview safe.</strong> The toolbar disables itself when you're in Preview mode so you can't accidentally format read-only content.</li>
+  </ul>
+
   <h2>Features</h2>
-  <p>
-    Full GitHub Flavored Markdown support: headings, bold, italic, tables, task lists, fenced code blocks, blockquotes, strikethrough, images, and links. Syntax-highlighted editing with a live preview. Folder mode with a sidebar tree view. Standard macOS keyboard shortcuts. Dark mode support.
-  </p>
+  <p>Full GitHub Flavored Markdown: headings, bold, italic, tables, task lists, fenced code blocks, block quotes, strikethrough, images, and links. Syntax-highlighted editing with a live preview. Folder mode with a sidebar tree view. In-document Find (⌘F) with match count, replace, and case-sensitive / whole-word options. Standard macOS keyboard shortcuts. Full Dark Mode support.</p>
+
+  <h2>Keyboard shortcuts</h2>
+  <table>
+    <thead>
+      <tr><th>Action</th><th>Shortcut</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Bold</td><td><kbd>⌘ B</kbd></td></tr>
+      <tr><td>Italic</td><td><kbd>⌘ I</kbd></td></tr>
+      <tr><td>Heading 1 / 2 / 3</td><td><kbd>⌥ ⌘ 1</kbd> · <kbd>⌥ ⌘ 2</kbd> · <kbd>⌥ ⌘ 3</kbd></td></tr>
+      <tr><td>Bullet list</td><td><kbd>⇧ ⌘ 8</kbd></td></tr>
+      <tr><td>Numbered list</td><td><kbd>⇧ ⌘ 9</kbd></td></tr>
+      <tr><td>Task list</td><td><kbd>⇧ ⌘ L</kbd></td></tr>
+      <tr><td>Insert link</td><td><kbd>⌘ K</kbd></td></tr>
+      <tr><td>Find</td><td><kbd>⌘ F</kbd></td></tr>
+      <tr><td>Find next / previous</td><td><kbd>⌘ G</kbd> · <kbd>⇧ ⌘ G</kbd></td></tr>
+      <tr><td>Open file / folder</td><td><kbd>⌘ O</kbd> · <kbd>⇧ ⌘ O</kbd></td></tr>
+    </tbody>
+  </table>
+
+  <h2>System requirements</h2>
+  <p>macOS 13 (Ventura) or later. Apple Silicon or Intel Mac.</p>
 
   <h2>Privacy</h2>
   <p>Marksmith has no network access. It does not collect, store, or transmit any data. Your files stay on your Mac.</p>
 
+  <h2>Version history</h2>
+
+  <h3>1.2 — June 2026</h3>
+  <ul>
+    <li>Formatting toolbar with 15 buttons in the editor's title bar.</li>
+    <li>Keyboard shortcuts for bold, italic, headings 1–3, bullet / numbered / task lists, and links.</li>
+    <li>Toggle behavior — apply a button on already-formatted text and the markers come off.</li>
+    <li>Heading-level swap without stacking. H1 → H2 → H3 in place.</li>
+    <li>Auto-numbering when the numbered-list button is applied across multiple lines.</li>
+    <li>Toolbar disables itself in Preview mode to prevent accidental formatting.</li>
+    <li>Monotone icons that follow your system appearance (light or dark).</li>
+  </ul>
+
+  <h3>1.1 — April 2026</h3>
+  <ul>
+    <li>In-document Find. Press <kbd>⌘ F</kbd> in Edit mode to open the native Find Bar.</li>
+    <li>Match count, case-sensitive toggle, whole-word toggle, Replace.</li>
+    <li>Find next / previous with <kbd>⌘ G</kbd> and <kbd>⇧ ⌘ G</kbd>.</li>
+    <li>Cross-mode behavior — pressing <kbd>⌘ F</kbd> from Preview switches to Edit and opens the Find Bar.</li>
+  </ul>
+
+  <h3>1.0 — April 2026</h3>
+  <ul>
+    <li>Initial release.</li>
+    <li>Edit and Preview modes with a single-click toggle.</li>
+    <li>Folder mode with a sidebar tree view of your markdown files.</li>
+    <li>Full GitHub Flavored Markdown rendering — tables, task lists, fenced code, block quotes, images, links.</li>
+    <li>Syntax-highlighted editing.</li>
+    <li>Native macOS keyboard shortcuts.</li>
+    <li>Light and Dark Mode support.</li>
+  </ul>
+
   <div class="footer">
-    <p>&copy; 2025 Core Data LLC. All rights reserved.</p>
+    <p>&copy; 2026 Core Data LLC. All rights reserved. · <a href="https://apps.apple.com/us/app/marksmith/id6762143551?mt=12">Mac App Store</a></p>
   </div>
 </div>
 </body>
